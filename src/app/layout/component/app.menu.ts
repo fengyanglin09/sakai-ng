@@ -23,7 +23,7 @@ export class AppMenu {
             {
                 label: 'SPAA Unit',
                 items: [
-                    { label: 'Specialty Apps', icon: 'pi pi-desktop', routerLink: ['/'] },
+                    { label: 'Specialty Apps', icon: 'fa fa-laptop', routerLink: ['/'] },
                     { label: 'Analytics', icon: 'pi pi-chart-bar', routerLink: ['/'] },
                 ]
             },
@@ -39,7 +39,7 @@ export class AppMenu {
             {
                 label: 'Development Resources',
                 items: [
-                    { label: 'CAD Apps', icon: 'pi pi-desktop', routerLink: ['/'] },
+                    { label: 'CAD Apps', icon: 'fa fa-tools', routerLink: ['/'] },
                     // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
 
@@ -48,7 +48,7 @@ export class AppMenu {
             {
                 label: 'Support Resources',
                 items: [
-                    { label: 'CAD Apps', icon: 'pi pi-desktop', routerLink: ['/'] },
+                    { label: 'CAD Apps', icon: 'fa fa-headset', routerLink: ['/'] },
                     // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
 
@@ -57,7 +57,7 @@ export class AppMenu {
             {
                 label: 'Access & Accounts',
                 items: [
-                    { label: 'CAD Apps', icon: 'pi pi-desktop', routerLink: ['/'] },
+                    { label: 'CAD Apps', icon: 'fa fa-user-shield', routerLink: ['/'] },
                     // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
 
