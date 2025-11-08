@@ -17,7 +17,7 @@ import { LayoutService } from '../service/layout.service';
             </button>
             <a class="layout-topbar-logo" routerLink="/">
 
-                <img src="/assets/app/mayo-logo.png" alt="mayo specialty app & analytics" class="pr-1" style="height:1.5em; width:auto;"  />
+                <img src="assets/app/mayo-logo.png" alt="mayo specialty app & analytics" class="pr-1" style="height:1.5em; width:auto;"  />
 
 
 <!--                <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg">-->
