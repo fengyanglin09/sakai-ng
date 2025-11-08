@@ -4,8 +4,9 @@ import { Component } from '@angular/core';
     standalone: true,
     selector: 'app-footer',
     template: `<div class="layout-footer">
-        SAKAI by
-        <a href="https://primeng.org" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">PrimeNG</a>
+
+        <img src="assets/app/mayo-footer.png" alt="Footer Logo" style="height: 1.8em; width: auto">
+        Mayo Foundation for Medical Education and Research © 2025. All rights reserved.
     </div>`
 })
 export class AppFooter {}
