@@ -26,9 +26,11 @@
         > .layout-menuitem-root-text {
             font-size: 0.857rem;
             text-transform: uppercase;
+            font-family: sans-serif;
             font-weight: 700;
             color: var(--text-color);
             margin: 0.75rem 0;
+
         }
 
         > a {
@@ -84,7 +86,7 @@
 
             &.active-route {
                 font-weight: 700;
-                color: var(--primary-color);
+                color: #4d89b5;
             }
 
             &:hover {
