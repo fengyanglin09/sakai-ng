@@ -73,124 +73,124 @@
                     </span>
                 </td>
 
-                <td>
+                <td *ngFor="let env of app.environments">
                     <span style="display: flex; gap: 6px; align-items: center;">
-                        <a href="{{app.devEnv.appWebUri}}" target="_blank">
+                        <a href="{{env.appWebUri}}" target="_blank">
                             <i [class]="AppItemIcon['appUri']"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.devEnv.appWebUri ? 'green' : 'gray'}"
+                               [ngStyle]="{'color': env.appWebUri ? 'green' : 'gray'}"
                             ></i>
                         </a>
-                        <a href="{{app.devEnv.appSwaggerUri}}" target="_blank">
+                        <a href="{{env.appSwaggerUri}}" target="_blank">
                             <i [class]="AppItemIcon['swaggerUri']"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.devEnv.appSwaggerUri ? 'green' : 'gray'}"
+                               [ngStyle]="{'color': env.appSwaggerUri ? 'green' : 'gray'}"
                             ></i>
                         </a>
-                        <a href="{{app.devEnv.appDbConnectionString}}" target="_blank">
+                        <a href="{{env.appDbConnectionString}}" target="_blank">
                             <i [class]="AppItemIcon['dbConnectionString']"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.devEnv.appDbConnectionString ? 'green' : 'gray'}"
+                               [ngStyle]="{'color': env.appDbConnectionString ? 'green' : 'gray'}"
                             ></i>
                         </a>
-                        <a href="{{app.devEnv.appAzureId}}" target="_blank">
+                        <a href="{{env.appAzureId}}" target="_blank">
                             <i [class]="AppItemIcon['azureId']"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.devEnv.appAzureId ? 'green' : 'gray'}"
+                               [ngStyle]="{'color': env.appAzureId ? 'green' : 'gray'}"
                             ></i>
                         </a>
                     </span>
                 </td>
 
 
-                <td>
-                    <span style="display: flex; gap: 6px; align-items: center;">
-                        <a href="{{app.intEnv.appWebUri}}" target="_blank">
-                            <i [class]="AppItemIcon['appUri']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.intEnv.appWebUri ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.intEnv.appSwaggerUri}}" target="_blank">
-                            <i [class]="AppItemIcon['swaggerUri']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.intEnv.appSwaggerUri ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.intEnv.appDbConnectionString}}" target="_blank">
-                            <i [class]="AppItemIcon['dbConnectionString']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.intEnv.appDbConnectionString ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.intEnv.appAzureId}}" target="_blank">
-                            <i [class]="AppItemIcon['azureId']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.intEnv.appAzureId ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                    </span>
-                </td>
+<!--                <td>-->
+<!--                    <span style="display: flex; gap: 6px; align-items: center;">-->
+<!--                        <a href="{{app.intEnv.appWebUri}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['appUri']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.intEnv.appWebUri ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.intEnv.appSwaggerUri}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['swaggerUri']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.intEnv.appSwaggerUri ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.intEnv.appDbConnectionString}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['dbConnectionString']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.intEnv.appDbConnectionString ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.intEnv.appAzureId}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['azureId']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.intEnv.appAzureId ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                    </span>-->
+<!--                </td>-->
 
 
-                <td>
-                    <span style="display: flex; gap: 6px; align-items: center;">
-                        <a href="{{app.stgEnv.appWebUri}}" target="_blank">
-                            <i [class]="AppItemIcon['appUri']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.stgEnv.appWebUri ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.stgEnv.appSwaggerUri}}" target="_blank">
-                            <i [class]="AppItemIcon['swaggerUri']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.stgEnv.appSwaggerUri ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.stgEnv.appDbConnectionString}}" target="_blank">
-                            <i [class]="AppItemIcon['dbConnectionString']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.stgEnv.appDbConnectionString ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.stgEnv.appAzureId}}" target="_blank">
-                            <i [class]="AppItemIcon['azureId']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.stgEnv.appAzureId ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                    </span>
-                </td>
+<!--                <td>-->
+<!--                    <span style="display: flex; gap: 6px; align-items: center;">-->
+<!--                        <a href="{{app.stgEnv.appWebUri}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['appUri']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.stgEnv.appWebUri ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.stgEnv.appSwaggerUri}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['swaggerUri']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.stgEnv.appSwaggerUri ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.stgEnv.appDbConnectionString}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['dbConnectionString']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.stgEnv.appDbConnectionString ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.stgEnv.appAzureId}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['azureId']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.stgEnv.appAzureId ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                    </span>-->
+<!--                </td>-->
 
 
-                <td>
-                    <span style="display: flex; gap: 6px; align-items: center;">
-                        <a href="{{app.prodEnv.appWebUri}}" target="_blank">
-                            <i [class]="AppItemIcon['appUri']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.prodEnv.appWebUri ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.prodEnv.appSwaggerUri}}" target="_blank">
-                            <i [class]="AppItemIcon['swaggerUri']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.prodEnv.appSwaggerUri ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.prodEnv.appDbConnectionString}}" target="_blank">
-                            <i [class]="AppItemIcon['dbConnectionString']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.prodEnv.appDbConnectionString ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                        <a href="{{app.prodEnv.appAzureId}}" target="_blank">
-                            <i [class]="AppItemIcon['azureId']"
-                               style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.prodEnv.appAzureId ? 'green' : 'gray'}"
-                            ></i>
-                        </a>
-                    </span>
-                </td>
+<!--                <td>-->
+<!--                    <span style="display: flex; gap: 6px; align-items: center;">-->
+<!--                        <a href="{{app.prodEnv.appWebUri}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['appUri']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.prodEnv.appWebUri ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.prodEnv.appSwaggerUri}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['swaggerUri']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.prodEnv.appSwaggerUri ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.prodEnv.appDbConnectionString}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['dbConnectionString']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.prodEnv.appDbConnectionString ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                        <a href="{{app.prodEnv.appAzureId}}" target="_blank">-->
+<!--                            <i [class]="AppItemIcon['azureId']"-->
+<!--                               style="font-size: 1.2em;"-->
+<!--                               [ngStyle]="{'color': app.prodEnv.appAzureId ? 'green' : 'gray'}"-->
+<!--                            ></i>-->
+<!--                        </a>-->
+<!--                    </span>-->
+<!--                </td>-->
 
                 <td>
                     <a href="{{app.appSpecificationLink}}" target="_blank">

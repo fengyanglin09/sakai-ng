@@ -5,11 +5,11 @@ import { TableModule } from 'primeng/table';
 import { ButtonDirective } from 'primeng/button';
 import { Tag } from 'primeng/tag';
 import { Ripple } from 'primeng/ripple';
-import { DatePipe, NgStyle } from '@angular/common';
+import { DatePipe, NgForOf, NgStyle } from '@angular/common';
 
 @Component({
     selector: 'app-specialty-apps',
-    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe],
+    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf],
     templateUrl: './specialty-apps.component.html',
     styleUrl: './specialty-apps.component.scss',
     providers: [SpapDataService]

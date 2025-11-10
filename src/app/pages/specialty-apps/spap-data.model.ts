@@ -38,10 +38,10 @@ export interface SpecialtyApp {
     configurationItem?: string;
     wikiLink?: string;
     orgLink?: string;
-    devEnv?: AppEnvironment;
-    intEnv?: AppEnvironment;
-    stgEnv?: AppEnvironment;
-    prodEnv?: AppEnvironment;
+    environments?: AppEnvironment[];
+    // intEnv?: AppEnvironment;
+    // stgEnv?: AppEnvironment;
+    // prodEnv?: AppEnvironment;
     updatedOn?: string | Date;
     appSpecs?: AppNote[];
     programmingLanguage?: ProgrammingLanguage;
