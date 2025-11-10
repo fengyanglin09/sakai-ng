@@ -1,9 +1,7 @@
 import { Routes } from '@angular/router';
+import { SpecialtyAppsComponent } from './specialty-apps/specialty-apps.component';
 
 
 export default [
-    // { path: 'documentation', component: Documentation },
-    // { path: 'crud', component: Crud },
-    // { path: 'empty', component: Empty },
-    // { path: '**', redirectTo: '/notfound' }
+    { path: 'specialty-app-dashboard', component: SpecialtyAppsComponent },
 ] as Routes;

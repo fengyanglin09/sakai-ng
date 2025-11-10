@@ -23,7 +23,7 @@ export class AppMenu {
             {
                 label: 'SPAA Unit',
                 items: [
-                    { label: 'Specialty Apps', icon: 'fa fa-laptop', routerLink: ['/'] },
+                    { label: 'Specialty Apps', icon: 'fa fa-laptop', routerLink: ['/pages/specialty-app-dashboard'] },
                     { label: 'Analytics', icon: 'pi pi-chart-bar', routerLink: ['/'] },
                 ]
             },
