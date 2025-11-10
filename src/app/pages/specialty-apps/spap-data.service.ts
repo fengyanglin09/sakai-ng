@@ -21,8 +21,8 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
                     appSwaggerUri: undefined,
-                    appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                    appAzureId: 'azure-id-dev-12345'
+                    appDbConnectionString: undefined,
+                    appAzureId: undefined
                 },
                 {
                     id: 2,
@@ -30,8 +30,8 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
                     appSwaggerUri: undefined,
-                    appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                    appAzureId: 'azure-id-dev-12345'
+                    appDbConnectionString: undefined,
+                    appAzureId: undefined
                 },
                 {
                     id: 3,
@@ -39,8 +39,8 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-s.dlmp-cad-p.caf.mccapp.com/',
                     appSwaggerUri: undefined,
-                    appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                    appAzureId: 'azure-id-dev-12345'
+                    appDbConnectionString: undefined,
+                    appAzureId: undefined
                 },
                  {
                      id: 4,
@@ -48,8 +48,8 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
                     appSwaggerUri: undefined,
-                    appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                    appAzureId: 'azure-id-dev-12345'
+                    appDbConnectionString: undefined,
+                    appAzureId: undefined
                 },
                 ],
                 updatedOn: '2025-11-09',
@@ -75,8 +75,8 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 2,
@@ -84,8 +84,8 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 3,
@@ -102,8 +102,8 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                 ],
                 updatedOn: '2025-11-09',
@@ -129,8 +129,8 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 2,
@@ -138,8 +138,8 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 3,
@@ -156,8 +156,8 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                 ],
                 updatedOn: '2025-11-09',
@@ -172,9 +172,9 @@ export class SpapDataService {
 
             {
                 id: 4,
-                name: 'SMASH',
-                configurationItem: 'CI131329162',
-                wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:smash',
+                name: 'CliApi',
+                configurationItem: undefined,
+                wikiLink: undefined,
                 orgLink: undefined,
 
                 environments: [
@@ -182,37 +182,37 @@ export class SpapDataService {
                         id: 1,
                         name: 'Dev Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
-                        appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.dev.mayo.edu/swagger/index.html',
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined,
                     },
                     {
                         id: 2,
                         name: 'Int/Test Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
-                        appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.int.mayo.edu/swagger/index.html',
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 3,
                         name: 'Stg Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-s.dlmp-cad-p.caf.mccapp.com/',
-                        appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.stg.mayo.edu/swagger/index.html',
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 4,
                         name: 'Prod Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
-                        appSwaggerUri: undefined,
-                        appDbConnectionString: 'Server=smash-dev-sql.mayo.edu;Database=SMASH;User Id=smash_user;Password=********;',
-                        appAzureId: 'azure-id-dev-12345'
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.prod.mayo.edu/swagger/index.html',
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
                     },
                 ],
                 updatedOn: '2025-11-09',

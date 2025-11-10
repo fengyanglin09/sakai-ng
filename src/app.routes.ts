@@ -7,6 +7,7 @@ export const appRoutes: Routes = [
         path: '',
         component: AppLayout,
         children: [
+            { path: '', redirectTo: 'pages/specialty-app-dashboard', pathMatch: 'full' },
             // { path: '', component: Dashboard },
             // { path: 'uikit', loadChildren: () => import('./app/pages/uikit/uikit.routes') },
             // { path: 'documentation', component: Documentation },
