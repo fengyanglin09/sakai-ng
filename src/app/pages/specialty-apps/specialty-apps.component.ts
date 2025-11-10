@@ -89,4 +89,5 @@ export class SpecialtyAppsComponent implements OnInit {
     //     }
     // }
     protected readonly AppItemIcon = AppItemIcon;
+    protected readonly toString = toString;
 }

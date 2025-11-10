@@ -44,8 +44,8 @@
         </ng-template>
         <ng-template #groupfooter let-app>
             <tr class="p-rowgroup-footer">
-                <td colspan="8" style="text-align: right">Total App Count</td>
-                <td>{{calculateAppTotal(app.programmingLanguage.name)}}</td>
+                <td colspan="8" style="text-align: right">Total App Count:</td>
+                <td> <p-tag [value]="'' + calculateAppTotal(app.programmingLanguage.name)"> </p-tag></td>
             </tr>
         </ng-template>
         <ng-template #expandedrow let-app>
