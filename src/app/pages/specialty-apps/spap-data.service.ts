@@ -58,10 +58,9 @@ export class SpapDataService {
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
-                programmingLanguage: {
+                appCategory: {
                     id: 1,
                     name: 'Java Apps',
-                    image: 'assets/app/programmingLanguage/java.png'
                 }
             },
 
@@ -116,10 +115,9 @@ export class SpapDataService {
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
-                programmingLanguage: {
+                appCategory: {
                     id: 1,
                     name: 'Java Apps',
-                    image: 'assets/app/programmingLanguage/java.png'
                 }
             },
 
@@ -174,10 +172,9 @@ export class SpapDataService {
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
-                programmingLanguage: {
+                appCategory: {
                     id: 1,
                     name: 'Java Apps',
-                    image: 'assets/app/programmingLanguage/java.png'
                 }
             },
 
@@ -232,13 +229,11 @@ export class SpapDataService {
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
-                programmingLanguage: {
+                appCategory: {
                     id: 1,
                     name: 'Java Apps',
-                    image: 'assets/app/programmingLanguage/java.png'
                 }
             },
-
 
             {
                 id: 21,
@@ -291,10 +286,68 @@ export class SpapDataService {
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
-                programmingLanguage: {
+                appCategory: {
+                    id: 2,
+                    name: 'DotNet Apps',
+
+                }
+            },
+
+            {
+                id: 31,
+                name: 'CLI API',
+                configurationItem: undefined,
+                wikiLink: undefined,
+                orgLink: undefined,
+
+                environments: [
+                    {
+                        id: 1,
+                        name: 'Dev Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.dev.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined,
+                    },
+                    {
                         id: 2,
-                        name: 'DotNet Apps',
-                        image: 'assets/app/programmingLanguage/dotnet.png'
+                        name: 'Int/Test Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.int.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                    {
+                        id: 3,
+                        name: 'Stg Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.stg.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                    {
+                        id: 4,
+                        name: 'Prod Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://cadlis.prod.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                ],
+                updatedOn: '2025-11-09',
+                appSpecs: undefined,
+                appCategory: {
+                        id: 3,
+                        name: 'Dependency Apps',
+
                 }
             },
 

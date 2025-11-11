@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpapDataService } from './spap-data.service';
-import { AppItemIcon, SpecialtyApp } from './spap-data.model';
+import { AppHeaderInfo, AppHeaderInfoType, AppItemIcon, SpecialtyApp } from './spap-data.model';
 import { TableModule } from 'primeng/table';
 import { Button, ButtonDirective } from 'primeng/button';
 import { Tag } from 'primeng/tag';
@@ -36,8 +36,8 @@ export class SpecialtyAppsComponent implements OnInit {
 
             // Add all group keys (e.g., representative names)
             this.specialtyApps.forEach((app) => {
-                if (app.programmingLanguage?.id) {
-                    this.expandedRowGroupKeys[app.programmingLanguage?.id] = true;
+                if (app.appCategory?.id) {
+                    this.expandedRowGroupKeys[app.appCategory?.id] = true;
                 }
             });
         });
@@ -48,7 +48,7 @@ export class SpecialtyAppsComponent implements OnInit {
 
         if (this.specialtyApps) {
             for (let app of this.specialtyApps) {
-                if (app.programmingLanguage?.name === name) {
+                if (app.appCategory?.name === name) {
                     total++;
                 }
             }
@@ -80,4 +80,21 @@ export class SpecialtyAppsComponent implements OnInit {
         }
     }
 
+    protected getAppHeaderInfo(id: number, type: AppHeaderInfoType): any {
+
+        switch (type) {
+            case 'name': {
+                return AppHeaderInfo.find((app) => app.id === id)?.name;
+            }
+            case 'image': {
+                return AppHeaderInfo.find((app) => app.id === id)?.image;
+            }
+            case 'backlogUrl': {
+                return AppHeaderInfo.find((app) => app.id === id)?.backlogUrl;
+            }
+            default: {
+                return 'undefined';
+            }
+        }
+    }
 }

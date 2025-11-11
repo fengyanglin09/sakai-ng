@@ -7,7 +7,46 @@ export const AppItemIcon = {
     "dbConnectionString": "fa fa-database",
     "azureId": "fa fa-key",
     "apigeeUri": "fa fa-exchange-alt",
-    "appSpecificationLink": "fa fa-file-alt"
+    "appSpecificationLink": "fa fa-file-alt",
+    'appBackLogLink': 'fa fa-tasks'
+}
+
+export type AppHeaderInfoType = 'name' | 'image' | 'backlogUrl';
+
+
+export const AppHeaderInfo: AppHeader[] = [
+    {
+        id: 1,
+        name: 'Java Apps',
+        image: 'assets/app/appClass/java.png',
+        backlogUrl:
+            [
+                { name: 'SMASH', url: 'https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/SMASH/Stories', label: 'SMASH Backlog'  },
+                { name: 'Empiricals', url: 'https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/Empiricals/Stories', label: 'Empiricals Backlog'  }
+            ]
+    },
+
+    {
+        id: 2,
+        name: 'DotNet Apps',
+        image: 'assets/app/appClass/dotnet.png',
+        backlogUrl: undefined
+    },
+
+    {
+        id: 3,
+        name: 'Dependency Apps',
+        image: 'assets/app/appClass/dependencyApp.png',
+        backlogUrl: undefined
+    }
+]
+
+export interface AppHeader {
+    id?: number;
+    name?: string;
+    image?: string;
+    backlogUrl?: {name?: string, url?: string, label?: string}[];
+
 }
 
 export interface AppEnvironment {
@@ -28,7 +67,7 @@ export interface AppNote {
     createdOn?: string | Date;
 }
 
-export interface ProgrammingLanguage {
+export interface AppCategory {
     id?: number;
     name?: string;
     image?: string;
@@ -43,5 +82,5 @@ export interface SpecialtyApp {
     environments?: AppEnvironment[];
     updatedOn?: string | Date;
     appSpecs?: AppNote[];
-    programmingLanguage?: ProgrammingLanguage;
+    appCategory?: AppCategory;
 }
