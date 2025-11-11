@@ -6,6 +6,7 @@ export const AppItemIcon = {
     "swaggerUri": "fa fa-file-code",
     "dbConnectionString": "fa fa-database",
     "azureId": "fa fa-key",
+    "apigeeUri": "fa fa-exchange-alt",
     "appSpecificationLink": "fa fa-file-alt"
 }
 
@@ -15,6 +16,7 @@ export interface AppEnvironment {
     name?: string;
     appWebUri?: string;
     appSwaggerUri?: string;
+    apigeeUri?: string;
     appDbConnectionString?: string;
     appAzureId?: string;
 }
@@ -39,9 +41,6 @@ export interface SpecialtyApp {
     wikiLink?: string;
     orgLink?: string;
     environments?: AppEnvironment[];
-    // intEnv?: AppEnvironment;
-    // stgEnv?: AppEnvironment;
-    // prodEnv?: AppEnvironment;
     updatedOn?: string | Date;
     appSpecs?: AppNote[];
     programmingLanguage?: ProgrammingLanguage;

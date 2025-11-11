@@ -2,14 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { SpapDataService } from './spap-data.service';
 import { AppItemIcon, SpecialtyApp } from './spap-data.model';
 import { TableModule } from 'primeng/table';
-import { ButtonDirective } from 'primeng/button';
+import { Button, ButtonDirective } from 'primeng/button';
 import { Tag } from 'primeng/tag';
 import { Ripple } from 'primeng/ripple';
-import { DatePipe, NgForOf, NgStyle } from '@angular/common';
+import { DatePipe, NgForOf, NgIf, NgStyle } from '@angular/common';
+import { Tooltip } from 'primeng/tooltip';
+import { Popover } from 'primeng/popover';
+import { InputGroup } from 'primeng/inputgroup';
+import { InputGroupAddon } from 'primeng/inputgroupaddon';
+import { InputText } from 'primeng/inputtext';
 
 @Component({
     selector: 'app-specialty-apps',
-    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf],
+    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf, Tooltip, Popover, InputGroup, InputGroupAddon, NgIf, InputText],
     templateUrl: './specialty-apps.component.html',
     styleUrl: './specialty-apps.component.scss',
     providers: [SpapDataService]
@@ -19,17 +24,11 @@ export class SpecialtyAppsComponent implements OnInit {
 
     specialtyApps!: SpecialtyApp[];
 
-    // specialty-apps.component.ts
+    popoverText: { title?: string; content?: string } | undefined = undefined;
+
     expandedRowGroupKeys: { [s: number]: boolean } = {};
 
     constructor(private dataService: SpapDataService) {}
-
-    // ngAfterViewInit(): void {
-    //     // Expand all groups
-    //     this.customers.forEach(c => {
-    //         this.table.toggleRowGroup(c.representative.name, true);
-    //     });
-    // }
 
     ngOnInit() {
         this.dataService.getCustomersMedium().then((data) => {
@@ -47,14 +46,6 @@ export class SpecialtyAppsComponent implements OnInit {
     calculateAppTotal(name: string) {
         let total = 0;
 
-        // if (this.specialtyApps) {
-        //     this.specialtyApps
-        //         .map((app) => {
-        //             return <number>(app.programmingLanguage?.name === name ? 1 : 0);
-        //         })
-        //         .reduce((sum, cur) => sum + cur, 0);
-        // }
-
         if (this.specialtyApps) {
             for (let app of this.specialtyApps) {
                 if (app.programmingLanguage?.name === name) {
@@ -66,28 +57,27 @@ export class SpecialtyAppsComponent implements OnInit {
         return total;
     }
 
-    // // @ts-ignore
-    // getSeverity(status: string) {
-    //     switch (status) {
-    //         case 'unqualified':
-    //             return 'danger';
-    //
-    //         case 'qualified':
-    //             return 'success';
-    //
-    //         case 'new':
-    //             return 'info';
-    //
-    //         case 'negotiation':
-    //             return 'warn';
-    //
-    //         case 'renewal':
-    //             return null;
-    //
-    //         // default:
-    //         //     return null;
-    //     }
-    // }
+
     protected readonly AppItemIcon = AppItemIcon;
     protected readonly toString = toString;
+
+    protected displayPopover(title: string, content: string, op: Popover, $event: MouseEvent) {
+
+        this.popoverText = {};
+        this.popoverText.title = title;
+        this.popoverText.content = content;
+        op.show($event);
+
+        if (op.container) {
+            op.align();
+        }
+    }
+
+
+    copyToClipboard(text: string | undefined) {
+        if (text){
+        navigator.clipboard.writeText(text);
+        }
+    }
+
 }

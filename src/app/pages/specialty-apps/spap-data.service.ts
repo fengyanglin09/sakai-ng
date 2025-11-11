@@ -8,7 +8,7 @@ export class SpapDataService {
     getData() {
         return [
             {
-                id: 1,
+                id: 11,
                 name: 'SMASH',
                 configurationItem: 'CI131329162',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:smash',
@@ -21,8 +21,9 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
                     appSwaggerUri: undefined,
-                    appDbConnectionString: undefined,
-                    appAzureId: undefined
+                    apigeeUri: 'this is for testing',
+                    appDbConnectionString: 'this is for testing2',
+                    appAzureId: 'this is for testing3'
                 },
                 {
                     id: 2,
@@ -30,8 +31,9 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
                     appSwaggerUri: undefined,
+                    apigeeUri: undefined,
                     appDbConnectionString: undefined,
-                    appAzureId: undefined
+                    appAzureId: 'this is for testing4'
                 },
                 {
                     id: 3,
@@ -39,6 +41,7 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-s.dlmp-cad-p.caf.mccapp.com/',
                     appSwaggerUri: undefined,
+                    apigeeUri: undefined,
                     appDbConnectionString: undefined,
                     appAzureId: undefined
                 },
@@ -48,6 +51,7 @@ export class SpapDataService {
                     available: true,
                     appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
                     appSwaggerUri: undefined,
+                    apigeeUri: undefined,
                     appDbConnectionString: undefined,
                     appAzureId: undefined
                 },
@@ -56,13 +60,13 @@ export class SpapDataService {
                 appSpecs: undefined,
                 programmingLanguage: {
                     id: 1,
-                    name: 'Java Applications',
+                    name: 'Java Apps',
                     image: 'assets/app/programmingLanguage/java.png'
                 }
             },
 
             {
-                id: 2,
+                id: 12,
                 name: 'GFR',
                 configurationItem: 'CI155931678',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:gfr',
@@ -73,8 +77,9 @@ export class SpapDataService {
                         id: 1,
                         name: 'Dev Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
+                        appWebUri: 'https://gfr.tcdev.mayo.edu/gfr/',
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -82,8 +87,9 @@ export class SpapDataService {
                         id: 2,
                         name: 'Int/Test Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
+                        appWebUri: 'https://gfr.tcint.mayo.edu/gfr/',
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -93,6 +99,7 @@ export class SpapDataService {
                         available: false,
                         appWebUri: undefined,
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined,
                     },
@@ -100,8 +107,9 @@ export class SpapDataService {
                         id: 4,
                         name: 'Prod Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
+                        appWebUri: 'https://gfr.tcprod.mayo.edu/gfr/',
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -110,13 +118,13 @@ export class SpapDataService {
                 appSpecs: undefined,
                 programmingLanguage: {
                     id: 1,
-                    name: 'Java Applications',
+                    name: 'Java Apps',
                     image: 'assets/app/programmingLanguage/java.png'
                 }
             },
 
             {
-                id: 3,
+                id: 13,
                 name: 'NERDS',
                 configurationItem: 'CI02041840',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:nerds',
@@ -127,8 +135,9 @@ export class SpapDataService {
                         id: 1,
                         name: 'Dev Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
+                        appWebUri: 'https://nerds-dev.mayo.edu/nerds/',
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -136,8 +145,9 @@ export class SpapDataService {
                         id: 2,
                         name: 'Int/Test Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
+                        appWebUri: 'https://nerds-int.mayo.edu/nerds/',
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -147,6 +157,7 @@ export class SpapDataService {
                         available: false,
                         appWebUri: undefined,
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined,
                     },
@@ -154,8 +165,9 @@ export class SpapDataService {
                         id: 4,
                         name: 'Prod Environment',
                         available: true,
-                        appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
+                        appWebUri: 'https://nerds.mayo.edu/nerds/',
                         appSwaggerUri: undefined,
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -164,15 +176,73 @@ export class SpapDataService {
                 appSpecs: undefined,
                 programmingLanguage: {
                     id: 1,
-                    name: 'Java Applications',
+                    name: 'Java Apps',
+                    image: 'assets/app/programmingLanguage/java.png'
+                }
+            },
+
+            {
+                id: 14,
+                name: 'Pub Services',
+                configurationItem: 'CI01611088',
+                wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:ngs:genomics_commons:publicationservices',
+                orgLink: 'https://mayoweb.mayo.edu/dlmp-im/systems-tools-listing.html?system=genomics_commons_pubservices',
+
+                environments: [
+                    {
+                        id: 1,
+                        name: 'Dev Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://pub-svcs-d.dlmp-cad-n.caf.mccapp.com/swagger-ui/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                    {
+                        id: 2,
+                        name: 'Int/Test Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://pub-svcs-t.dlmp-cad-n.caf.mccapp.com/swagger-ui/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                    {
+                        id: 3,
+                        name: 'Stg Environment',
+                        available: false,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://pub-svcs-s.dlmp-cad-p.caf.mccapp.com/swagger-ui/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined,
+                    },
+                    {
+                        id: 4,
+                        name: 'Prod Environment',
+                        available: true,
+                        appWebUri: undefined,
+                        appSwaggerUri: 'https://pub-svcs-p.dlmp-cad-p.caf.mccapp.com/swagger-ui/index.html',
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                ],
+                updatedOn: '2025-11-09',
+                appSpecs: undefined,
+                programmingLanguage: {
+                    id: 1,
+                    name: 'Java Apps',
                     image: 'assets/app/programmingLanguage/java.png'
                 }
             },
 
 
             {
-                id: 4,
-                name: 'CliApi',
+                id: 21,
+                name: 'CLI API',
                 configurationItem: undefined,
                 wikiLink: undefined,
                 orgLink: undefined,
@@ -184,6 +254,7 @@ export class SpapDataService {
                         available: true,
                         appWebUri: undefined,
                         appSwaggerUri: 'https://cadlis.dev.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined,
                     },
@@ -193,6 +264,7 @@ export class SpapDataService {
                         available: true,
                         appWebUri: undefined,
                         appSwaggerUri: 'https://cadlis.int.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -202,6 +274,7 @@ export class SpapDataService {
                         available: true,
                         appWebUri: undefined,
                         appSwaggerUri: 'https://cadlis.stg.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -211,6 +284,7 @@ export class SpapDataService {
                         available: true,
                         appWebUri: undefined,
                         appSwaggerUri: 'https://cadlis.prod.mayo.edu/swagger/index.html',
+                        apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
@@ -219,7 +293,7 @@ export class SpapDataService {
                 appSpecs: undefined,
                 programmingLanguage: {
                         id: 2,
-                        name: 'DotNet Applications',
+                        name: 'DotNet Apps',
                         image: 'assets/app/programmingLanguage/dotnet.png'
                 }
             },
