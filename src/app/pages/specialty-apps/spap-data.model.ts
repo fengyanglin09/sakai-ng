@@ -1,3 +1,4 @@
+import { MenuItem } from 'primeng/api';
 
 export const AppItemIcon = {
     "wikiLink": "fa fa-book",
@@ -8,7 +9,8 @@ export const AppItemIcon = {
     "azureId": "fa fa-key",
     "apigeeUri": "fa fa-exchange-alt",
     "appSpecificationLink": "fa fa-file-alt",
-    'appBackLogLink': 'fa fa-tasks'
+    'appBackLogLink': 'fa fa-tasks',
+    'configurationItem': 'fa fa-cogs'
 }
 
 export type AppHeaderInfoType = 'name' | 'image' | 'backlogUrl';
@@ -19,11 +21,28 @@ export const AppHeaderInfo: AppHeader[] = [
         id: 1,
         name: 'Java Apps',
         image: 'assets/app/appClass/java.png',
-        backlogUrl:
-            [
-                { name: 'SMASH', url: 'https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/SMASH/Stories', label: 'SMASH Backlog'  },
-                { name: 'Empiricals', url: 'https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/Empiricals/Stories', label: 'Empiricals Backlog'  }
-            ]
+        backlogUrl: [
+
+            {
+                icon: 'fa fa-tasks',
+                label: 'NERDS',
+                target:'_blank',
+                command: () => window.open('https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/NERDS/Stories', '_blank')
+            },
+            {
+                icon: 'fa fa-tasks',
+                label: 'SMASH',
+                target:'_blank',
+                command: () => window.open('https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/SMASH/Stories', '_blank')
+            },
+            {
+                icon: 'fa fa-tasks',
+                label: 'Empiricals',
+                target:'_blank',
+                command: () => window.open('https://dev.azure.com/mclm/GBS%20CAD/_backlogs/backlog/Empiricals/Stories', '_blank')
+            }
+        ]
+
     },
 
     {
@@ -45,7 +64,7 @@ export interface AppHeader {
     id?: number;
     name?: string;
     image?: string;
-    backlogUrl?: {name?: string, url?: string, label?: string}[];
+    backlogUrl?: MenuItem[];
 
 }
 

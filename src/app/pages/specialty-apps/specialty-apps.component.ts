@@ -11,10 +11,11 @@ import { Popover } from 'primeng/popover';
 import { InputGroup } from 'primeng/inputgroup';
 import { InputGroupAddon } from 'primeng/inputgroupaddon';
 import { InputText } from 'primeng/inputtext';
+import { SpeedDial } from 'primeng/speeddial';
 
 @Component({
     selector: 'app-specialty-apps',
-    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf, Tooltip, Popover, InputGroup, InputGroupAddon, NgIf, InputText],
+    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf, Tooltip, Popover, InputGroup, InputGroupAddon, NgIf, InputText, SpeedDial],
     templateUrl: './specialty-apps.component.html',
     styleUrl: './specialty-apps.component.scss',
     providers: [SpapDataService]
@@ -96,5 +97,10 @@ export class SpecialtyAppsComponent implements OnInit {
                 return 'undefined';
             }
         }
+    }
+
+    protected toggleCallback($event: any) {
+        console.log($event);
+        console.log("hahaha");
     }
 }

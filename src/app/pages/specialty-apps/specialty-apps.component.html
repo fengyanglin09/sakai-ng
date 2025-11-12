@@ -1,53 +1,80 @@
 <div class="card">
-    <p-table #table [value]="specialtyApps"
+    <p-table #table [expandedRowKeys]="expandedRowGroupKeys"
 
+             [tableStyle]="{'min-width': '70rem'}"
+             [value]="specialtyApps"
              dataKey="appCategory.id"
-             rowGroupMode="subheader"
              groupRowsBy="appCategory.id"
-             [expandedRowKeys]="expandedRowGroupKeys"
-             [tableStyle]="{'min-width': '70rem'}">
+             rowGroupMode="subheader">
         <ng-template #header>
             <tr>
-                <th style="width:13%">AppName</th>
-                <th style="width:9%">Config Item</th>
+                <th style="width:10%">AppName</th>
+                <th style="width:5%">Config Item</th>
                 <th style="width:10%">App Info</th>
-                <th style="width:14%">Dev Env</th>
-                <th style="width:14%">Int/Test Env</th>
-                <th style="width:14%">Stg Env</th>
-                <th style="width:14%">Prod Env</th>
+                <th style="width:13%">Dev Env</th>
+                <th style="width:13%">Int/Test Env</th>
+                <th style="width:13%">Stg Env</th>
+                <th style="width:13%">Prod Env</th>
                 <th style="width:5%">App Spec</th>
                 <th style="width:8%">Updated On</th>
             </tr>
         </ng-template>
-        <ng-template #groupheader let-app let-rowIndex="rowIndex" let-expanded="expanded">
+        <ng-template #groupheader let-app let-expanded="expanded" let-rowIndex="rowIndex">
             <tr>
+
                 <td colspan="5">
+
+                    <span class="flex items-center">
                     <button
-                        type="button"
+                        [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"
+                        [pRowToggler]="app"
+                        class="mr-2"
                         pButton
                         pRipple
-                        [pRowToggler]="app"
-                        text
-                        rounded
                         plain
-                        class="mr-2"
-                        [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'">
+                        rounded
+                        text
+                        type="button">
                     </button>
+
                     <img
                         [alt]="getAppHeaderInfo(app.appCategory.id, 'name')"
                         [src]="getAppHeaderInfo(app.appCategory.id, 'image')"
-                        width="32"
-                        style="vertical-align: middle; display: inline-block" />
-                    <span class="font-bold ml-2">{{getAppHeaderInfo(app.appCategory.id, 'name')}}</span>
+                        style="vertical-align: middle; display: inline-block"
+                        width="32" />
 
-                    <ng-container *ngFor="let item of getAppHeaderInfo(app.appCategory.id, 'backlogUrl')">
-                        <!-- template content -->
-                        <a href="{{item.url}}" target="_blank" class="ml-3">
-                            <i pTooltip="{{item.label}}" tooltipPosition="top"  [class]="AppItemIcon['appBackLogLink']"
-                               style="font-size: 1.2em; color: green;"
-                            ></i>
-                        </a>
-                    </ng-container>
+                    <span class="font-bold ml-2">{{ getAppHeaderInfo(app.appCategory.id, 'name') }}</span>
+
+                        <p-speeddial [model]="getAppHeaderInfo(app.appCategory.id, 'backlogUrl')"
+                                     class="ml-3"
+                                     direction="right"
+
+                        >
+                          <ng-template #button let-toggleCallback="toggleCallback"  >
+                            <button (click)="toggleCallback($event)"
+                                    pTooltip="backlogs"
+                                    tooltipPosition="top"
+                            >
+                              <i class="pi pi-cog" style="font-size: 1.5rem" [ngStyle]="{'color': getAppHeaderInfo(app.appCategory.id, 'backlogUrl') ? 'green' : 'gray'}"></i>
+                            </button>
+                          </ng-template>
+
+                          <ng-template #item let-item let-toggleCallback="toggleCallback">
+                                <div
+                                    class="flex flex-col items-center justify-between gap-2 p-2 border rounded border-surface-200 dark:border-surface-700 w-15 cursor-pointer"
+                                    (click)="toggleCallback($event, item)"
+                                >
+                                    <span [class]="item.icon"></span>
+                                    <span class="font-sans text-surface-900 dark:text-surface-0" style="font-size: 0.85em;">
+                                        {{ item.label }}
+                                    </span>
+                                </div>
+                          </ng-template>
+
+                        </p-speeddial>
+
+                    </span>
+
 
                 </td>
             </tr>
@@ -55,29 +82,39 @@
         <ng-template #groupfooter let-app>
             <tr class="p-rowgroup-footer">
                 <td colspan="8" style="text-align: right">Total App Count:</td>
-                <td> <p-tag [value]="'' + calculateAppTotal(app.appCategory.name)"> </p-tag></td>
+                <td>
+                    <p-tag [value]="'' + calculateAppTotal(app.appCategory.name)"></p-tag>
+                </td>
             </tr>
         </ng-template>
         <ng-template #expandedrow let-app>
             <tr>
                 <td>
-                    <span style="font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: large" >{{app.name}}</span>
+                    <span
+                        style="font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: large">{{ app.name }}</span>
                 </td>
                 <td>
-                    <span style="font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: medium" >{{app.configurationItem}}</span>
+                    <!--                    <span style="font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: medium" >{{app.configurationItem}}</span>-->
+
+                    <i (click)="displayPopover('App Configuration Item', app.configurationItem, op, $event)" [class]="AppItemIcon['configurationItem']" [ngStyle]="{'color': app.configurationItem ? 'green' : 'gray'}"
+                       pTooltip="config item"
+                       style="font-size: 1.2em; cursor: pointer"
+                       tooltipPosition="top"
+                    ></i>
+
                 </td>
                 <td>
                     <span style="display: flex; gap: 6px; align-items: center;">
                         <a href="{{app.wikiLink}}" target="_blank">
-                            <i pTooltip="wiki" tooltipPosition="top"  [class]="AppItemIcon['wikiLink']"
+                            <i [class]="AppItemIcon['wikiLink']" [ngStyle]="{'color': app.wikiLink ? 'green' : 'gray'}" pTooltip="wiki"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.wikiLink ? 'green' : 'gray'}"
+                               tooltipPosition="top"
                             ></i>
                         </a>
                         <a href="{{app.orgLink}}" target="_blank">
-                            <i pTooltip="org page" tooltipPosition="top"  [class]="AppItemIcon['orgLink']"
+                            <i [class]="AppItemIcon['orgLink']" [ngStyle]="{'color': app.orgLink ? 'green' : 'gray'}" pTooltip="org page"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': app.orgLink ? 'green' : 'gray'}"
+                               tooltipPosition="top"
                             ></i>
                         </a>
                     </span>
@@ -86,36 +123,36 @@
                 <td *ngFor="let env of app.environments">
                     <span style="display: flex; gap: 6px; align-items: center;">
                         <a href="{{env.appWebUri}}" target="_blank">
-                            <i pTooltip="url" tooltipPosition="top" [class]="AppItemIcon['appUri']"
+                            <i [class]="AppItemIcon['appUri']" [ngStyle]="{'color': env.appWebUri ? 'green' : 'gray'}" pTooltip="url"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': env.appWebUri ? 'green' : 'gray'}"
+                               tooltipPosition="top"
                             ></i>
                         </a>
                         <a href="{{env.appSwaggerUri}}" target="_blank">
-                            <i pTooltip="swagger" tooltipPosition="top"  [class]="AppItemIcon['swaggerUri']"
+                            <i [class]="AppItemIcon['swaggerUri']" [ngStyle]="{'color': env.appSwaggerUri ? 'green' : 'gray'}" pTooltip="swagger"
                                style="font-size: 1.2em;"
-                               [ngStyle]="{'color': env.appSwaggerUri ? 'green' : 'gray'}"
+                               tooltipPosition="top"
                             ></i>
                         </a>
 
-                        <i pTooltip="apigee" tooltipPosition="top"  [class]="AppItemIcon['apigeeUri']"
-                           (click)="displayPopover('Apigee Base Url', env.apigeeUri, op, $event)"
+                        <i (click)="displayPopover('Apigee Base Url', env.apigeeUri, op, $event)" [class]="AppItemIcon['apigeeUri']" [ngStyle]="{'color': env.apigeeUri ? 'green' : 'gray'}"
+                           pTooltip="apigee"
                            style="font-size: 1.2em; cursor: pointer"
-                           [ngStyle]="{'color': env.apigeeUri ? 'green' : 'gray'}"
+                           tooltipPosition="top"
                         ></i>
 
 
-                        <i pTooltip="db url" tooltipPosition="top"  [class]="AppItemIcon['dbConnectionString']"
-                           (click)="displayPopover('DataBase Url', env.appDbConnectionString, op, $event)"
+                        <i (click)="displayPopover('DataBase Url', env.appDbConnectionString, op, $event)" [class]="AppItemIcon['dbConnectionString']" [ngStyle]="{'color': env.appDbConnectionString ? 'green' : 'gray'}"
+                           pTooltip="db url"
                            style="font-size: 1.2em;"
-                           [ngStyle]="{'color': env.appDbConnectionString ? 'green' : 'gray'}"
+                           tooltipPosition="top"
                         ></i>
 
 
-                        <i pTooltip="azure client id" tooltipPosition="top"  [class]="AppItemIcon['azureId']"
-                           (click)="displayPopover('Azure Client Id', env.appAzureId, op, $event)"
+                        <i (click)="displayPopover('Azure Client Id', env.appAzureId, op, $event)" [class]="AppItemIcon['azureId']" [ngStyle]="{'color': env.appAzureId ? 'green' : 'gray'}"
+                           pTooltip="azure client id"
                            style="font-size: 1.2em;"
-                           [ngStyle]="{'color': env.appAzureId ? 'green' : 'gray'}"
+                           tooltipPosition="top"
                         ></i>
 
                     </span>
@@ -125,14 +162,15 @@
                 <td>
                     <a href="{{app.appSpecificationLink}}" target="_blank">
                         <i [class]="AppItemIcon['appSpecificationLink']"
-                           style="font-size: 1.2em;"
                            [ngStyle]="{'color': app.appSpecificationLink ? 'green' : 'gray'}"
+                           style="font-size: 1.2em;"
                         ></i>
                     </a>
                 </td>
 
                 <td>
-                    <span style="font-family: 'Courier New', Courier, monospace; font-weight: bold" > {{app.updatedOn | date:'MM/dd/yyyy'}} </span>
+                    <span
+                        style="font-family: 'Courier New', Courier, monospace; font-weight: bold"> {{ app.updatedOn | date:'MM/dd/yyyy' }} </span>
                 </td>
 
             </tr>
@@ -141,20 +179,19 @@
 </div>
 
 
-
-
 <p-popover #op (onHide)="popoverText = undefined">
 
     <ng-template #content>
         <ng-container *ngIf="popoverText">
 
             <div>
-                <span class="font-medium text-surface-900 dark:text-surface-0 block mb-2">{{popoverText.title ?? ''}}</span>
+                <span
+                    class="font-medium text-surface-900 dark:text-surface-0 block mb-2">{{ popoverText.title ?? '' }}</span>
                 <p-inputgroup>
-                    <input pInputText [value]="popoverText.content" readonly class="w-[25rem]" />
+                    <input [value]="popoverText.content" class="w-[25rem]" pInputText readonly />
                     <p-inputgroup-addon
-                    [ngStyle]="{'cursor': 'pointer'}"
-                    (click)="copyToClipboard(popoverText.content ?? '')"
+                        (click)="copyToClipboard(popoverText.content ?? '')"
+                        [ngStyle]="{'cursor': 'pointer'}"
                     >
                         <i class="pi pi-copy"></i>
                     </p-inputgroup-addon>
