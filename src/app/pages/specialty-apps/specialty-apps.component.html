@@ -15,7 +15,8 @@
                 <th style="width:13%">Int/Test Env</th>
                 <th style="width:13%">Stg Env</th>
                 <th style="width:13%">Prod Env</th>
-                <th style="width:5%">App Spec</th>
+                <th style="width:8%">Repo</th>
+                <th style="width:6%">Spec</th>
                 <th style="width:8%">Updated On</th>
             </tr>
         </ng-template>
@@ -155,6 +156,20 @@
                            tooltipPosition="top"
                         ></i>
 
+                    </span>
+                </td>
+
+                <td>
+                    <span style="display: flex; gap: 6px; align-items: center;">
+                        <ng-container *ngFor="let repo of app.repos">
+                            <a href="{{repo.repoUri}}" target="_blank" class="ml-1">
+                                <i [class]="AppItemIcon['repoUri']" [ngStyle]="{'color': repo.repoUri ? 'green' : 'gray'}"
+                                   [pTooltip]="repo.repoName"
+                                   style="font-size: 1.2em;"
+                                   tooltipPosition="top"
+                                ></i>
+                            </a>
+                        </ng-container>
                     </span>
                 </td>
 

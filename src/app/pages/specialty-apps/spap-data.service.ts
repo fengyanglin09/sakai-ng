@@ -15,46 +15,58 @@ export class SpapDataService {
                 orgLink: undefined,
 
                 environments: [
-                {
-                    id: 1,
-                    name: 'Dev Environment',
-                    available: true,
-                    appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
-                    appSwaggerUri: undefined,
-                    apigeeUri: 'this is for testing',
-                    appDbConnectionString: 'this is for testing2',
-                    appAzureId: 'this is for testing3'
-                },
-                {
-                    id: 2,
-                    name: 'Int/Test Environment',
-                    available: true,
-                    appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
-                    appSwaggerUri: undefined,
-                    apigeeUri: undefined,
-                    appDbConnectionString: undefined,
-                    appAzureId: 'this is for testing4'
-                },
-                {
-                    id: 3,
-                    name: 'Stg Environment',
-                    available: true,
-                    appWebUri: 'https://smash-webapp-s.dlmp-cad-p.caf.mccapp.com/',
-                    appSwaggerUri: undefined,
-                    apigeeUri: undefined,
-                    appDbConnectionString: undefined,
-                    appAzureId: undefined
-                },
-                 {
-                     id: 4,
-                    name: 'Prod Environment',
-                    available: true,
-                    appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
-                    appSwaggerUri: undefined,
-                    apigeeUri: undefined,
-                    appDbConnectionString: undefined,
-                    appAzureId: undefined
-                },
+                    {
+                        id: 1,
+                        name: 'Dev Environment',
+                        available: true,
+                        appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
+                        appSwaggerUri: undefined,
+                        apigeeUri: 'this is for testing',
+                        appDbConnectionString: 'this is for testing2',
+                        appAzureId: 'this is for testing3'
+                    },
+                    {
+                        id: 2,
+                        name: 'Int/Test Environment',
+                        available: true,
+                        appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
+                        appSwaggerUri: undefined,
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: 'this is for testing4'
+                    },
+                    {
+                        id: 3,
+                        name: 'Stg Environment',
+                        available: true,
+                        appWebUri: 'https://smash-webapp-s.dlmp-cad-p.caf.mccapp.com/',
+                        appSwaggerUri: undefined,
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                     {
+                         id: 4,
+                        name: 'Prod Environment',
+                        available: true,
+                        appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
+                        appSwaggerUri: undefined,
+                        apigeeUri: undefined,
+                        appDbConnectionString: undefined,
+                        appAzureId: undefined
+                    },
+                ],
+                repos:[
+                    {
+                        id: 1,
+                        repoName: 'App',
+                        repoUri: undefined,
+                    },
+                    {
+                        id: 1,
+                        repoName: 'IAC',
+                        repoUri: undefined,
+                    }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
@@ -113,6 +125,18 @@ export class SpapDataService {
                         appAzureId: undefined
                     },
                 ],
+                repos:[
+                    {
+                        id: 1,
+                        repoName: 'App',
+                        repoUri: undefined,
+                    },
+                    {
+                        id: 1,
+                        repoName: 'IAC',
+                        repoUri: undefined,
+                    }
+                ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
                 appCategory: {
@@ -169,6 +193,18 @@ export class SpapDataService {
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
+                ],
+                repos:[
+                    {
+                        id: 1,
+                        repoName: 'App',
+                        repoUri: undefined,
+                    },
+                    {
+                        id: 1,
+                        repoName: 'IAC',
+                        repoUri: undefined,
+                    }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
@@ -227,6 +263,18 @@ export class SpapDataService {
                         appAzureId: undefined
                     },
                 ],
+                repos:[
+                    {
+                        id: 1,
+                        repoName: 'App',
+                        repoUri: undefined,
+                    },
+                    {
+                        id: 1,
+                        repoName: 'IAC',
+                        repoUri: undefined,
+                    }
+                ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
                 appCategory: {
@@ -283,6 +331,18 @@ export class SpapDataService {
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
+                ],
+                repos:[
+                    {
+                        id: 1,
+                        repoName: 'App',
+                        repoUri: undefined,
+                    },
+                    {
+                        id: 1,
+                        repoName: 'IAC',
+                        repoUri: undefined,
+                    }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
@@ -341,6 +401,18 @@ export class SpapDataService {
                         appDbConnectionString: undefined,
                         appAzureId: undefined
                     },
+                ],
+                repos:[
+                    {
+                        id: 1,
+                        repoName: 'App',
+                        repoUri: undefined,
+                    },
+                    {
+                        id: 1,
+                        repoName: 'IAC',
+                        repoUri: undefined,
+                    }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,

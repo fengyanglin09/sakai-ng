@@ -10,7 +10,8 @@ export const AppItemIcon = {
     "apigeeUri": "fa fa-exchange-alt",
     "appSpecificationLink": "fa fa-file-alt",
     'appBackLogLink': 'fa fa-tasks',
-    'configurationItem': 'fa fa-cogs'
+    'configurationItem': 'fa fa-cogs',
+    'repoUri': 'fa fa-code-branch'
 }
 
 export type AppHeaderInfoType = 'name' | 'image' | 'backlogUrl';
@@ -68,6 +69,12 @@ export interface AppHeader {
 
 }
 
+export interface AppRepo {
+    id?: number;
+    repoName?: string;
+    repoUri?: string;
+}
+
 export interface AppEnvironment {
     id?: number;
     available?: boolean;
@@ -99,6 +106,7 @@ export interface SpecialtyApp {
     wikiLink?: string;
     orgLink?: string;
     environments?: AppEnvironment[];
+    repos?: AppRepo[];
     updatedOn?: string | Date;
     appSpecs?: AppNote[];
     appCategory?: AppCategory;
