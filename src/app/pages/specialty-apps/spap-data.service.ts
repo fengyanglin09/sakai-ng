@@ -13,6 +13,7 @@ export class SpapDataService {
                 configurationItem: 'CI131329162',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:smash',
                 orgLink: undefined,
+                onCallLink: undefined,
 
                 environments: [
                     {
@@ -60,16 +61,25 @@ export class SpapDataService {
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined,
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-APP',
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: undefined,
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-IAC',
                     }
                 ],
                 updatedOn: '2025-11-09',
-                appSpecs: undefined,
+                appSpecs: `
+                          <p><b>Dependency App:</b> <span style="color:#2c7be5;">CliApi</span></p>
+                          <p><b>Endpoints dependent are:</b></p>
+                          <ol style="margin-left: 1rem; list-style-type: decimal;">
+                            <li><code>/v1/Result/bioChem</code></li>
+                            <li><code>/v1/Sslv/SampleInfo</code></li>
+                            <li><code>/v1/Sslv/Result</code></li>
+                            <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
+                          </ol>
+                        `,
                 appCategory: {
                     id: 1,
                     name: 'Java Apps',
@@ -82,6 +92,7 @@ export class SpapDataService {
                 configurationItem: 'CI155931678',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:gfr',
                 orgLink: 'https://mayoweb.mayo.edu/dlmp-im/systems-tools-listing.html?system=gfr',
+                onCallLink: undefined,
 
                 environments: [
                     {
@@ -138,7 +149,16 @@ export class SpapDataService {
                     }
                 ],
                 updatedOn: '2025-11-09',
-                appSpecs: undefined,
+                appSpecs: `
+                          <p><b>Dependency App:</b> <span style="color:#2c7be5;">CliApi</span></p>
+                          <p><b>Endpoints dependent are:</b></p>
+                          <ol style="list-style-type: decimal; padding-left: 1.5rem; margin-top: 0.5rem;">
+                            <li><code>/v1/Result/bioChem</code></li>
+                            <li><code>/v1/Sslv/SampleInfo</code></li>
+                            <li><code>/v1/Sslv/Result</code></li>
+                            <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
+                          </ol>
+                        `,
                 appCategory: {
                     id: 1,
                     name: 'Java Apps',
@@ -151,6 +171,7 @@ export class SpapDataService {
                 configurationItem: 'CI02041840',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:nerds',
                 orgLink: 'https://mayoweb.mayo.edu/dlmp-im/systems-tools-listing.html?system=nerds',
+                onCallLink: undefined,
 
                 environments: [
                     {
@@ -220,6 +241,7 @@ export class SpapDataService {
                 configurationItem: 'CI01611088',
                 wikiLink: 'https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:ngs:genomics_commons:publicationservices',
                 orgLink: 'https://mayoweb.mayo.edu/dlmp-im/systems-tools-listing.html?system=genomics_commons_pubservices',
+                onCallLink: undefined,
 
                 environments: [
                     {
@@ -289,6 +311,7 @@ export class SpapDataService {
                 configurationItem: undefined,
                 wikiLink: undefined,
                 orgLink: undefined,
+                onCallLink: undefined,
 
                 environments: [
                     {
@@ -359,6 +382,7 @@ export class SpapDataService {
                 configurationItem: undefined,
                 wikiLink: undefined,
                 orgLink: undefined,
+                onCallLink: undefined,
 
                 environments: [
                     {

@@ -11,7 +11,8 @@ export const AppItemIcon = {
     "appSpecificationLink": "fa fa-file-alt",
     'appBackLogLink': 'fa fa-tasks',
     'configurationItem': 'fa fa-cogs',
-    'repoUri': 'fa fa-code-branch'
+    'repoUri': 'fa fa-code-branch',
+    'onCallLink': 'fa fa-headset'
 }
 
 export type AppHeaderInfoType = 'name' | 'image' | 'backlogUrl';
@@ -86,12 +87,12 @@ export interface AppEnvironment {
     appAzureId?: string;
 }
 
-export interface AppNote {
-    id?: number;
-    noteTitle?: string;
-    noteText?: string;
-    createdOn?: string | Date;
-}
+// export interface AppNote {
+//     id?: number;
+//     noteTitle?: string;
+//     noteText?: string;
+//     createdOn?: string | Date;
+// }
 
 export interface AppCategory {
     id?: number;
@@ -105,9 +106,10 @@ export interface SpecialtyApp {
     configurationItem?: string;
     wikiLink?: string;
     orgLink?: string;
+    onCallLink?: string;
     environments?: AppEnvironment[];
     repos?: AppRepo[];
     updatedOn?: string | Date;
-    appSpecs?: AppNote[];
+    appSpecs?: string;
     appCategory?: AppCategory;
 }

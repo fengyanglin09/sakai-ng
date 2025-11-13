@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, WritableSignal } from '@angular/core';
 import { SpapDataService } from './spap-data.service';
 import { AppHeaderInfo, AppHeaderInfoType, AppItemIcon, SpecialtyApp } from './spap-data.model';
 import { TableModule } from 'primeng/table';
@@ -12,10 +12,11 @@ import { InputGroup } from 'primeng/inputgroup';
 import { InputGroupAddon } from 'primeng/inputgroupaddon';
 import { InputText } from 'primeng/inputtext';
 import { SpeedDial } from 'primeng/speeddial';
+import { Dialog } from 'primeng/dialog';
 
 @Component({
     selector: 'app-specialty-apps',
-    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf, Tooltip, Popover, InputGroup, InputGroupAddon, NgIf, InputText, SpeedDial],
+    imports: [TableModule, ButtonDirective, Tag, Ripple, NgStyle, DatePipe, NgForOf, Tooltip, Popover, InputGroup, InputGroupAddon, NgIf, InputText, SpeedDial, Dialog],
     templateUrl: './specialty-apps.component.html',
     styleUrl: './specialty-apps.component.scss',
     providers: [SpapDataService]
@@ -58,12 +59,12 @@ export class SpecialtyAppsComponent implements OnInit {
         return total;
     }
 
-
     protected readonly AppItemIcon = AppItemIcon;
     protected readonly toString = toString;
+    protected showDialog: boolean | WritableSignal<boolean> = false;
+    protected dialogContent: any; // example - `<p>This is a <b>bold</b> word and <span style="color:blue">blue text</span>.</p> `
 
     protected displayPopover(title: string, content: string, op: Popover, $event: MouseEvent) {
-
         this.popoverText = {};
         this.popoverText.title = title;
         this.popoverText.content = content;
@@ -74,15 +75,13 @@ export class SpecialtyAppsComponent implements OnInit {
         }
     }
 
-
     copyToClipboard(text: string | undefined) {
-        if (text){
-        navigator.clipboard.writeText(text);
+        if (text) {
+            navigator.clipboard.writeText(text);
         }
     }
 
     protected getAppHeaderInfo(id: number, type: AppHeaderInfoType): any {
-
         switch (type) {
             case 'name': {
                 return AppHeaderInfo.find((app) => app.id === id)?.name;
@@ -101,6 +100,15 @@ export class SpecialtyAppsComponent implements OnInit {
 
     protected toggleCallback($event: any) {
         console.log($event);
-        console.log("hahaha");
+        console.log('hahaha');
+    }
+
+    protected hideDialog() {
+        this.showDialog = false;
+    }
+
+    protected displayDialog(applicationSpecification: string, appSpecs: string) {
+        this.dialogContent = appSpecs;
+        this.showDialog = true;
     }
 }

@@ -24,7 +24,7 @@ export class AppMenu {
                 label: 'SPAA Unit',
                 items: [
                     { label: 'Specialty Apps', icon: 'fa fa-laptop', routerLink: ['/pages/specialty-app-dashboard'] },
-                    { label: 'Analytics', icon: 'pi pi-chart-bar', routerLink: ['/'] },
+                    { label: 'Analytics reports', icon: 'pi pi-chart-bar', routerLink: ['/pages/analytics-report-dashboard'] },
                 ]
             },
             {

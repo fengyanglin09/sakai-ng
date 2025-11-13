@@ -95,8 +95,6 @@
                         style="font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: large">{{ app.name }}</span>
                 </td>
                 <td>
-                    <!--                    <span style="font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: medium" >{{app.configurationItem}}</span>-->
-
                     <i (click)="displayPopover('App Configuration Item', app.configurationItem, op, $event)" [class]="AppItemIcon['configurationItem']" [ngStyle]="{'color': app.configurationItem ? 'green' : 'gray'}"
                        pTooltip="config item"
                        style="font-size: 1.2em; cursor: pointer"
@@ -118,13 +116,19 @@
                                tooltipPosition="top"
                             ></i>
                         </a>
+                        <a href="{{app.onCallLink}}" target="_blank">
+                            <i [class]="AppItemIcon['onCallLink']" [ngStyle]="{'color': app.onCallLink ? 'green' : 'gray'}" pTooltip="onCall page"
+                               style="font-size: 1.2em;"
+                               tooltipPosition="top"
+                            ></i>
+                        </a>
                     </span>
                 </td>
 
                 <td *ngFor="let env of app.environments">
                     <span style="display: flex; gap: 6px; align-items: center;">
                         <a href="{{env.appWebUri}}" target="_blank">
-                            <i [class]="AppItemIcon['appUri']" [ngStyle]="{'color': env.appWebUri ? 'green' : 'gray'}" pTooltip="url"
+                            <i [class]="AppItemIcon['appUri']" [ngStyle]="{'color': env.appWebUri ? 'green' : 'gray'}" pTooltip="app url"
                                style="font-size: 1.2em;"
                                tooltipPosition="top"
                             ></i>
@@ -175,12 +179,13 @@
 
 
                 <td>
-                    <a href="{{app.appSpecificationLink}}" target="_blank">
+
                         <i [class]="AppItemIcon['appSpecificationLink']"
-                           [ngStyle]="{'color': app.appSpecificationLink ? 'green' : 'gray'}"
-                           style="font-size: 1.2em;"
+                           [ngStyle]="{'color': app.appSpecs ? 'green' : 'gray', 'cursor': app.appSpecs ? 'pointer' : 'not-allowed'}"
+                           style="font-size: 1.2em; cursor: pointer;"
+                           (click)="app.appSpecs && displayDialog('Application Specification', app.appSpecs)"
                         ></i>
-                    </a>
+
                 </td>
 
                 <td>
@@ -217,3 +222,9 @@
     </ng-template>
 
 </p-popover>
+
+
+
+<p-dialog header="App Specifics" [(visible)]="showDialog" (onHide)="hideDialog()" [style]="{ width: '50vw' }">
+    <div [innerHTML]="dialogContent"></div>
+</p-dialog>
