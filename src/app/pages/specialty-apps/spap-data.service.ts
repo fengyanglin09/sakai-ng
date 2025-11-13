@@ -156,6 +156,7 @@ export class SpapDataService {
                             <li><code>/v1/Sslv/SampleInfo</code></li>
                             <li><code>/v1/Sslv/Result</code></li>
                             <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
+                            <li><code>/v1/Case/SoftId/Search</code></li>
                           </ol>
                         `,
                 appCategory: {
