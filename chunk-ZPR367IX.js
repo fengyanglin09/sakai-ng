@@ -2,7 +2,6 @@ import{$ as Zn,A as ht,B as Nn,C as Un,D as Ze,E as ie,F as Fe,G as ni,H as gi,I
                           <p><b>Dependency App:</b> <span style="color:#2c7be5;">CliApi</span></p>
                           <p><b>Endpoints dependent are:</b></p>
                           <ol style="margin-left: 1rem; list-style-type: decimal;">
-                            <li><code>/v1/Result/bioChem</code></li>
                             <li><code>/v1/Sslv/SampleInfo</code></li>
                             <li><code>/v1/Sslv/Result</code></li>
                             <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
