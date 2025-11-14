@@ -33,7 +33,7 @@ export class SpecialtyAppsComponent implements OnInit {
     constructor(private dataService: SpapDataService) {}
 
     ngOnInit() {
-        this.dataService.getCustomersMedium().then((data) => {
+        this.dataService.getDataXLarge().then((data) => {
             this.specialtyApps = data;
 
             // Add all group keys (e.g., representative names)
