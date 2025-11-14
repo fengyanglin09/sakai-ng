@@ -13,7 +13,7 @@
     <p-accordion [(value)]="active">
         @for(resource of developmentResources; track resource.id){
             <p-accordion-panel [value]="resource?.activeItemId ?? ''">
-                <p-accordion-header>{{resource.name}}</p-accordion-header>
+                <p-accordion-header><span style="text-transform:uppercase; font-weight:bold;">{{resource.name}}</span></p-accordion-header>
                 <p-accordion-content>
                     <p class="m-0">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
