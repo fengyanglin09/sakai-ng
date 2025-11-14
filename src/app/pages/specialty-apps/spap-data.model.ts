@@ -87,12 +87,6 @@ export interface AppEnvironment {
     appAzureId?: string;
 }
 
-// export interface AppNote {
-//     id?: number;
-//     noteTitle?: string;
-//     noteText?: string;
-//     createdOn?: string | Date;
-// }
 
 export interface AppCategory {
     id?: number;

@@ -453,23 +453,23 @@ export class SpapDataService {
 
     constructor(private http: HttpClient) {}
 
-    getCustomersMini() {
+    getDataMini() {
         return Promise.resolve(this.getData().slice(0, 5));
     }
 
-    getCustomersSmall() {
+    getDataSmall() {
         return Promise.resolve(this.getData().slice(0, 10));
     }
 
-    getCustomersMedium() {
+    getDataMedium() {
         return Promise.resolve(this.getData().slice(0, 50));
     }
 
-    getCustomersLarge() {
+    getDataLarge() {
         return Promise.resolve(this.getData().slice(0, 200));
     }
 
-    getCustomersXLarge() {
+    getDataXLarge() {
         return Promise.resolve(this.getData());
     }
 }

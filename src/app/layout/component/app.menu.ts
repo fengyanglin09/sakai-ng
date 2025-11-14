@@ -28,40 +28,24 @@ export class AppMenu {
                 ]
             },
             {
-                label: 'GBS Unit',
+                label: 'GES Unit',
                 items: [
-                    { label: 'CAD Apps', icon: 'pi pi-desktop', routerLink: ['/'] },
+                    { label: 'CAD Apps', icon: 'fa fa-desktop', routerLink: ['/pages/cad-app-dashboard'] },
                     // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
 
             },
 
             {
-                label: 'Development Resources',
+                label: 'Mayo Resources',
                 items: [
-                    { label: 'CAD Apps', icon: 'fa fa-tools', routerLink: ['/'] },
-                    // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
+                    { label: 'Development', icon: 'fa fa-tools', routerLink: ['/pages/development-resource-dashboard'] },
+                    { label: 'Support', icon: 'fa fa-headset', routerLink: ['/pages/support-resource-dashboard'] },
+                    { label: 'Access & Accounts', icon: 'fa fa-user-shield', routerLink: ['/pages/access-accounts-resource-dashboard'] },
                 ]
 
             },
 
-            {
-                label: 'Support Resources',
-                items: [
-                    { label: 'CAD Apps', icon: 'fa fa-headset', routerLink: ['/'] },
-                    // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
-                ]
-
-            },
-
-            {
-                label: 'Access & Accounts',
-                items: [
-                    { label: 'CAD Apps', icon: 'fa fa-user-shield', routerLink: ['/'] },
-                    // { label: 'Double Helix - Java', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
-                ]
-
-            },
 
             // {
             //     label: 'SPAA Specifics',

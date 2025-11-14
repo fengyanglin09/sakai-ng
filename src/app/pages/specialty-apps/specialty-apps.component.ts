@@ -98,10 +98,6 @@ export class SpecialtyAppsComponent implements OnInit {
         }
     }
 
-    protected toggleCallback($event: any) {
-        console.log($event);
-        console.log('hahaha');
-    }
 
     protected hideDialog() {
         this.showDialog = false;
