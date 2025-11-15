@@ -11,7 +11,7 @@ import { MayoDevelopResource } from './dev-res-data.model';
     styleUrl: './development-resources.component.scss'
 })
 export class DevelopmentResourcesComponent implements OnInit {
-    active: number | string = 'azure';
+    active: number | string = 'cloud';
 
     developmentResources!: MayoDevelopResource[];
 
@@ -24,7 +24,17 @@ export class DevelopmentResourcesComponent implements OnInit {
     ngOnInit(): void {
         this.dataService.getDataXLarge().then((data) => {
             this.developmentResources = data;
-
-        })
+        });
     }
+
+
+    getMaxItems(resource: any) {
+        return Math.max(...resource.resources.map((r:any) => r.items.length));
+    }
+
+    getTotalItemCount(resource: any) {
+        return resource.resources.reduce((total: number, r: any) => total + r.items.length, 0);
+    }
+
+
 }

@@ -1,4 +1,15 @@
 
+export interface CheatItem {
+    label: string;
+    icon?: string;              // optional PrimeIcons
+    action: () => void;         // callback for click
+}
+
+export interface CheatCategory {
+    label: string;              // category name
+    items: CheatItem[];         // list of clickable items
+
+}
 
 
 
@@ -8,7 +19,6 @@ export class MayoDevelopResource {
     activeItemId?: string;
     name?: string;
     description?: string;
-    link?: string;
-    category?: string;
-    tags?: string[];
+    rowCounts?: number;                //number of rows or number of items per column
+    resources?: CheatCategory[];
 }
