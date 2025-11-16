@@ -37,7 +37,11 @@ export const appConfig: ApplicationConfig = {
             multi: true
         },
 
-        provideRouter(appRoutes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }), withEnabledBlockingInitialNavigation(), withHashLocation()),
+        provideRouter(appRoutes,
+            withHashLocation(),
+            withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
+            // withEnabledBlockingInitialNavigation(),
+        ),
         // provideHttpClient(withFetch()),
         provideAnimationsAsync(),
         providePrimeNG({ theme: { preset: Aura, options: { darkModeSelector: '.app-dark' } } })
