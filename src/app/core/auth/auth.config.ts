@@ -1,13 +1,14 @@
 import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
 import { MsalGuardConfiguration, MsalInterceptorConfiguration } from '@azure/msal-angular';
+import { environment } from '../../../environments/environment';
 
 
 export function msalInstanceFactory() {
     return new PublicClientApplication({
         auth: {
-            clientId: '483a2857-ef87-4f5f-b9b5-8cdf2c031586',
-            authority: 'https://login.microsoftonline.com/a25fff9c-3f63-4fb2-9a8a-d9bdd0321f9a',
-            redirectUri: 'http://localhost:4200/'
+            clientId: environment.clientId,
+            authority: `https://login.microsoftonline.com/{environment.tenantId}`,
+            redirectUri: environment.redirectUri
         },
         cache: {
             cacheLocation: 'localStorage',
