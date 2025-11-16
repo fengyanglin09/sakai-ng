@@ -38,7 +38,7 @@ export const appConfig: ApplicationConfig = {
         },
 
         provideRouter(appRoutes,
-            withHashLocation(),
+
             withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
             // withEnabledBlockingInitialNavigation(),
         ),

@@ -31,6 +31,7 @@ export function msalInterceptorConfigFactory(): MsalInterceptorConfiguration {
         interactionType: InteractionType.Redirect,
         protectedResourceMap: new Map([
             ['https://graph.microsoft.com/v1.0/me', ['User.Read']],
+            ["https://graph.microsoft.com/v1.0/me/photo/$value", ["User.Read"]]
         ])
     };
 }
