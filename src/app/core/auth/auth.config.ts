@@ -7,7 +7,7 @@ export function msalInstanceFactory() {
     return new PublicClientApplication({
         auth: {
             clientId: environment.clientId,
-            authority: `https://login.microsoftonline.com/{environment.tenantId}`,
+            authority: `https://login.microsoftonline.com/${environment.tenantId}`,
             redirectUri: environment.redirectUri
         },
         cache: {
