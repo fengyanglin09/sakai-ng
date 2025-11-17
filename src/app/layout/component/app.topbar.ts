@@ -15,38 +15,13 @@ import { UserInfoComponent } from '../../shared/components/user-info/user-info.c
     standalone: true,
     imports: [RouterModule, CommonModule, StyleClassModule, Avatar, Popover, UserInfoComponent],
     styles: `
-        ///* Force popover panel to behave like a block container */
-        //::ng-deep .user-popover .p-popover-panel {
-        //    display: block !important;
-        //}
-        //
-        ///* Fix arrow alignment */
-        //::ng-deep .user-popover .p-popover-arrow {
-        //    z-index: 2000;
-        //}
+
         /* Remove arrow */
-        :host ::ng-deep .p-popover:after,
-        :host ::ng-deep .p-popover:before {
+        :host ::ng-deep .profile-popover:after,
+        :host ::ng-deep .profile-popover:before {
             display: none !important;
         }
 
-
-        ///* Azure popover panel styling */
-        //::ng-deep .azure-popover .p-popover-panel {
-        //    @apply bg-white dark:bg-surface-900 rounded-xl shadow-xl
-        //    p-0 w-72 animate-slide-down;
-        //    margin-top: 0.5rem !important; /* space under avatar */
-        //    border: none !important;
-        //}
-        //
-        ///* Smooth Azure-style dropdown animation */
-        //@keyframes slide-down {
-        //    0% { opacity: 0; transform: translateY(-5px); }
-        //    100% { opacity: 1; transform: translateY(0); }
-        //}
-        //.animate-slide-down {
-        //    animation: slide-down 0.15s ease-out;
-        //}
     `,
     template: `
         <div class="layout-topbar">
@@ -86,7 +61,7 @@ import { UserInfoComponent } from '../../shared/components/user-info/user-info.c
 
                             <p-popover
                                 #op
-                                styleClass="azure-popover"
+                                styleClass="profile-popover"
                                 [appendTo]="profile"
                             >
                                 <app-user-card [user]="userInfo" [photo]="userPhoto"></app-user-card>
