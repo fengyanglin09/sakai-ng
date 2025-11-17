@@ -7,6 +7,7 @@ import { AuthenticationResult, AccountInfo } from '@azure/msal-browser';
 import { HttpClient } from '@angular/common/http';
 import { filter } from 'rxjs/operators';
 import { firstValueFrom } from 'rxjs';
+import { UserInfo } from './auth.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -68,6 +69,16 @@ export class AuthService {
         return claims.roles || claims.appRoles || [];
     }
 
+    /** Get Microsoft 365 user profile (name, email, etc.) */
+    async getUserInfo(): Promise<any> {
+        const token = await this.getAccessToken(["User.Read", "Group.Read.All", "User.Read.All"]);
+
+        return firstValueFrom(this.http.get("https://graph.microsoft.com/v1.0/me", {
+            headers: { Authorization: `Bearer ${token}` }
+        }));
+    }
+
+
     /** Acquire access token */
     async getAccessToken(scopes: string[] = ["User.Read"]): Promise<string | null> {
         try {
@@ -84,14 +95,25 @@ export class AuthService {
     }
 
     /** Get user profile info from Graph */
-    async getUserProfile(): Promise<any> {
+    async getUserProfile(): Promise<UserInfo> {
         const token = await this.getAccessToken(["User.Read"]);
 
-        return await firstValueFrom(
+        const graphUser: any = await firstValueFrom(
             this.http.get("https://graph.microsoft.com/v1.0/me", {
                 headers: { Authorization: `Bearer ${token}` }
             })
         );
+
+
+
+        return {
+            fullName: graphUser.displayName,
+            firstName: graphUser.givenName,
+            lastName: graphUser.surname,
+            jobTitle: graphUser.jobTitle,
+            email: graphUser.mail || graphUser.userPrincipalName,
+            roles: this.getUserRoles()
+        } as UserInfo;
     }
 
     /** Get user photo as base64 */

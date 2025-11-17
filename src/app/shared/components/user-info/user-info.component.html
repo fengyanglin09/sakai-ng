@@ -1,0 +1,40 @@
+<div class="w-72 p-4 bg-white dark:bg-surface-900 rounded-xl flex flex-col gap-4">
+
+    <!-- Avatar + Name -->
+    <div class="flex flex-col items-center text-center gap-2">
+        <p-avatar
+            [image]="photo"
+            shape="circle"
+            size="xlarge">
+        </p-avatar>
+
+        <div class="text-lg font-semibold">
+            {{ user?.fullName ?? "Unknown User" }}
+        </div>
+
+        <div class="text-sm text-gray-600 dark:text-gray-300">
+            {{ user?.email }}
+        </div>
+
+        <div class="text-sm text-blue-500 font-medium">
+            {{ user?.jobTitle || 'No job title' }}
+        </div>
+    </div>
+
+    <p-divider></p-divider>
+
+    <!-- ROLES -->
+    <div class="flex flex-col gap-2">
+        <div class="text-lg font-semibold">Roles</div>
+
+        <div class="flex flex-wrap gap-2">
+            @for (role of user?.roles; track role) {
+                <p-tag
+                    severity="info"
+                    [value]="role"
+                    styleClass="text-xs px-2 py-1"
+                ></p-tag>
+            }
+        </div>
+    </div>
+</div>

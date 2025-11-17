@@ -13,15 +13,15 @@ export class CadAppsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        if (!this.auth.isLoggedIn()) {
-            this.auth.login();
-        }
-
-        console.log("Roles:", this.auth.getUserRoles());
-
-        this.auth.getUserPhoto().then(photo => {
-            const userPhoto = photo;
-            console.log(photo);
-        });
+        // if (!this.auth.isLoggedIn()) {
+        //     this.auth.login();
+        // }
+        //
+        // console.log("Roles:", this.auth.getUserRoles());
+        //
+        // this.auth.getUserPhoto().then(photo => {
+        //     const userPhoto = photo;
+        //     console.log(photo);
+        // });
     }
 }
