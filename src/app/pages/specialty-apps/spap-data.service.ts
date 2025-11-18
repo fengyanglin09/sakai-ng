@@ -64,9 +64,14 @@ export class SpapDataService {
                         repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-APP'
                     },
                     {
-                        id: 1,
+                        id: 2,
                         repoName: 'IAC',
                         repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-IAC'
+                    },
+                    {
+                        id: 3,
+                        repoName: 'Api',
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
@@ -151,8 +156,13 @@ export class SpapDataService {
                         repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/GFR'
                     },
                     {
-                        id: 1,
+                        id: 2,
                         repoName: 'IAC',
+                        repoUri: undefined
+                    },
+                    {
+                        id: 3,
+                        repoName: 'Api',
                         repoUri: undefined
                     }
                 ],
@@ -196,20 +206,20 @@ export class SpapDataService {
                         name: 'Dev Environment',
                         available: true,
                         appWebUri: 'https://nerds-dev.mayo.edu/nerds/',
-                        appSwaggerUri: undefined,
+                        appSwaggerUri: 'https://nerds-dev-api2.mayo.edu/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'mcqfdn801ncsqlmi.97716e376a1c.database.windows.net',
+                        appAzureId: 'e8b97f0d-3a2e-4537-b70b-1659cdf069ef'
                     },
                     {
                         id: 2,
                         name: 'Int/Test Environment',
                         available: true,
                         appWebUri: 'https://nerds-int.mayo.edu/nerds/',
-                        appSwaggerUri: undefined,
+                        appSwaggerUri: 'https://nerds-int-api2.mayo.edu/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'mcqfdn901ncsqlmi.97716e376a1c.database.windows.net',
+                        appAzureId: 'ec5701c2-740e-46db-a056-9be3fd3725d7'
                     },
                     {
                         id: 3,
@@ -226,22 +236,27 @@ export class SpapDataService {
                         name: 'Prod Environment',
                         available: true,
                         appWebUri: 'https://nerds.mayo.edu/nerds/',
-                        appSwaggerUri: undefined,
+                        appSwaggerUri: 'https://nerds-api.mayo.edu/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'mcqnrd001ncsqlmi.87ee6c734738.database.windows.net',
+                        appAzureId: 'be32d2be-bfed-4c14-89ff-73400f1f9c29'
                     }
                 ],
                 repos: [
                     {
                         id: 1,
                         repoName: 'App',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/NERDS_UI'
+                    },
+                    {
+                        id: 2,
+                        repoName: 'IAC',
                         repoUri: undefined
                     },
                     {
-                        id: 1,
-                        repoName: 'IAC',
-                        repoUri: undefined
+                        id: 3,
+                        repoName: 'Api',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/NERDS_API'
                     }
                 ],
                 updatedOn: '2025-11-09',
@@ -268,8 +283,8 @@ export class SpapDataService {
                         appWebUri: undefined,
                         appSwaggerUri: 'https://pub-svcs-d.dlmp-cad-n.caf.mccapp.com/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'pub-svcs-d-404913688383:us-central1:pub-svcs-d-404913688383-db-dlmp-cad-dev',
+                        appAzureId: 'ef7a3f0b-bca6-4e8b-9c55-b7d481971546'
                     },
                     {
                         id: 2,
@@ -278,8 +293,8 @@ export class SpapDataService {
                         appWebUri: undefined,
                         appSwaggerUri: 'https://pub-svcs-t.dlmp-cad-n.caf.mccapp.com/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'pub-svcs-t-404913688383:us-central1:pub-svcs-t-404913688383-db-dlmp-cad-test',
+                        appAzureId: 'ef7a3f0b-bca6-4e8b-9c55-b7d481971546'
                     },
                     {
                         id: 3,
@@ -288,8 +303,8 @@ export class SpapDataService {
                         appWebUri: undefined,
                         appSwaggerUri: 'https://pub-svcs-s.dlmp-cad-p.caf.mccapp.com/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'pub-svcs-s-465825341433:us-central1:pub-svcs-s-465825341433-db-dlmp-cad-stage',
+                        appAzureId: '9d1a5200-f474-4dde-9707-b32825b26b22'
                     },
                     {
                         id: 4,
@@ -298,24 +313,50 @@ export class SpapDataService {
                         appWebUri: undefined,
                         appSwaggerUri: 'https://pub-svcs-p.dlmp-cad-p.caf.mccapp.com/swagger-ui/index.html',
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'pub-svcs-p-465825341433:us-central1:pub-svcs-p-465825341433-db-dlmp-cad-prod',
+                        appAzureId: '9d1a5200-f474-4dde-9707-b32825b26b22'
                     }
                 ],
                 repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/Genomics_Publication_Service_GCP_APP'
                     },
                     {
-                        id: 1,
+                        id: 2,
                         repoName: 'IAC',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/Genomics_Publication_Service_GCP_IAC'
+                    },
+                    {
+                        id: 3,
+                        repoName: 'Api',
                         repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
-                appSpecs: undefined,
+                appSpecs: `
+                         <div>
+                              <p><b>Client Apps:</b></p>
+                              <ol style="list-style-type: decimal; padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li><code>NGS Workbench (NGSWB)
+                                 <a href="https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:ngswb" target="_blank" rel="noopener">
+                                  <i class="fa fa-external-link-alt"></i>
+                                 </a>
+                                </code></li>
+                                <li><code>Microarray Workbench (MaWB/ACGH)
+                                 <a href="https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:acgh" target="_blank" rel="noopener">
+                                  <i class="fa fa-external-link-alt"></i>
+                                 </a>
+                                </code></li>
+                                <li><code>Mayo Gene Knowledge (MGK)
+                                <a href="https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:mgk" target="_blank" rel="noopener">
+                                  <i class="fa fa-external-link-alt"></i>
+                                </a>
+                                </code></li>
+                              </ol>
+                          </div>
+                        `,
                 appCategory: {
                     id: 1,
                     name: 'Java Apps'
@@ -324,7 +365,7 @@ export class SpapDataService {
 
             {
                 id: 21,
-                name: 'CLI API',
+                name: 'Dotnet App',
                 configurationItem: undefined,
                 wikiLink: undefined,
                 orgLink: undefined,
@@ -336,7 +377,7 @@ export class SpapDataService {
                         name: 'Dev Environment',
                         available: true,
                         appWebUri: undefined,
-                        appSwaggerUri: 'https://cadlis.dev.mayo.edu/swagger/index.html',
+                        appSwaggerUri: undefined,
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
@@ -346,7 +387,7 @@ export class SpapDataService {
                         name: 'Int/Test Environment',
                         available: true,
                         appWebUri: undefined,
-                        appSwaggerUri: 'https://cadlis.int.mayo.edu/swagger/index.html',
+                        appSwaggerUri: undefined,
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
@@ -356,7 +397,7 @@ export class SpapDataService {
                         name: 'Stg Environment',
                         available: true,
                         appWebUri: undefined,
-                        appSwaggerUri: 'https://cadlis.stg.mayo.edu/swagger/index.html',
+                        appSwaggerUri: undefined,
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
@@ -366,7 +407,7 @@ export class SpapDataService {
                         name: 'Prod Environment',
                         available: true,
                         appWebUri: undefined,
-                        appSwaggerUri: 'https://cadlis.prod.mayo.edu/swagger/index.html',
+                        appSwaggerUri: undefined,
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
@@ -379,8 +420,13 @@ export class SpapDataService {
                         repoUri: undefined
                     },
                     {
-                        id: 1,
+                        id: 2,
                         repoName: 'IAC',
+                        repoUri: undefined
+                    },
+                    {
+                        id: 3,
+                        repoName: 'Api',
                         repoUri: undefined
                     }
                 ],
@@ -449,13 +495,33 @@ export class SpapDataService {
                         repoUri: undefined
                     },
                     {
-                        id: 1,
+                        id: 2,
                         repoName: 'IAC',
+                        repoUri: undefined
+                    },
+                    {
+                        id: 3,
+                        repoName: 'Api',
                         repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
-                appSpecs: undefined,
+                appSpecs: `
+                           <div>
+                              <p><b>Client Apps (SPAA):</b></p>
+                              <ol style="list-style-type: decimal; padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li><code>Specimen Management and Specimen Handling (SMASH)
+                                 <a href="https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:smash" target="_blank" rel="noopener">
+                                  <i class="fa fa-external-link-alt"></i>
+                                 </a>
+                                </code></li>
+                                <li><code>Glomerular Filtration Rate (GFR)
+                                 <a href="https://cadwiki.mayo.edu/dokuwiki/doku.php?id=application:gfr" target="_blank" rel="noopener">
+                                  <i class="fa fa-external-link-alt"></i>
+                                 </a>
+                                </code></li>
+                              </ol>
+                          </div>`,
                 appCategory: {
                     id: 3,
                     name: 'Dependency Apps'
