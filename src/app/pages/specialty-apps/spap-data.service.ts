@@ -22,9 +22,9 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-d.dlmp-cad-n.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        apigeeUri: 'this is for testing',
-                        appDbConnectionString: 'this is for testing2',
-                        appAzureId: 'this is for testing3'
+                        apigeeUri: 'https://dev.mcc.apix.mayo.edu/cad-lis-api/',
+                        appDbConnectionString: 'smash-webapp-d-404913688383:us-central1:smash-webapp-d-404913688383-db-dlmp-cad-dev',
+                        appAzureId: 'a9f477ca-c91c-4d40-a9f8-f2d8923b74a4'
                     },
                     {
                         id: 2,
@@ -32,9 +32,9 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-t.dlmp-cad-n.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: 'this is for testing4'
+                        apigeeUri: 'https://test.mcc.apix.mayo.edu/cad-lis-api/',
+                        appDbConnectionString: 'smash-webapp-t-404913688383:us-central1:smash-webapp-t-404913688383-db-dlmp-cad-test',
+                        appAzureId: 'a9f477ca-c91c-4d40-a9f8-f2d8923b74a4'
                     },
                     {
                         id: 3,
@@ -42,46 +42,55 @@ export class SpapDataService {
                         available: true,
                         appWebUri: 'https://smash-webapp-s.dlmp-cad-p.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        apigeeUri: 'https://stage.mcc.apix.mayo.edu/cad-lis-api/',
+                        appDbConnectionString: 'smash-webapp-s-465825341433:us-central1:smash-webapp-s-465825341433-db-dlmp-cad-stage',
+                        appAzureId: 'b9fbb305-1c8e-4529-b7fc-c7e5731aebf2'
                     },
-                     {
-                         id: 4,
+                    {
+                        id: 4,
                         name: 'Prod Environment',
                         available: true,
                         appWebUri: 'https://smash-webapp-p.dlmp-cad-p.caf.mccapp.com/',
                         appSwaggerUri: undefined,
-                        apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
-                    },
+                        apigeeUri: 'https://prod.mcc.apix.mayo.edu/cad-lis-api/',
+                        appDbConnectionString: 'smash-webapp-p-465825341433:us-central1:smash-webapp-p-465825341433-db-dlmp-cad-prod',
+                        appAzureId: 'b9fbb305-1c8e-4529-b7fc-c7e5731aebf2'
+                    }
                 ],
-                repos:[
+                repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-APP',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-APP'
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-IAC',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/SMASH-IAC'
                     }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: `
+                        <div>
                           <p><b>Dependency App:</b> <span style="color:#2c7be5;">CliApi</span></p>
-                          <p><b>Endpoints dependent are:</b></p>
                           <ol style="margin-left: 1rem; list-style-type: decimal;">
                             <li><code>/v1/Sslv/SampleInfo</code></li>
                             <li><code>/v1/Sslv/Result</code></li>
                             <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
                           </ol>
+                        </div>
+                         <div style="margin-top:5rem;">
+                          <p><b>Dependency Auth Server:</b> <span style="color:#2c7be5;">Azure Entra ID</span></p>
+                          <ol style="margin-left: 1rem; list-style-type: decimal;">
+                            <li><code>Azure Tenant Id - a25fff9c-3f63-4fb2-9a8a-d9bdd0321f9a</code></li>
+                            <li><code>App Roles - ADMINISTRATOR, TECH, SPECIALIST, CONSULTANT</code></li>
+                          </ol>
+                        </div>
+
                         `,
                 appCategory: {
                     id: 1,
-                    name: 'Java Apps',
+                    name: 'Java Apps'
                 }
             },
 
@@ -101,8 +110,8 @@ export class SpapDataService {
                         appWebUri: 'https://gfr.tcdev.mayo.edu/gfr/',
                         appSwaggerUri: undefined,
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'jdbc:jtds:sqlserver://ROEFDN827Q/dlmp_ren_dev;domain=MFAD;useNTLMv2=true',
+                        appAzureId: '5f4fc0e7-0989-4134-9d23-41afe461357c'
                     },
                     {
                         id: 2,
@@ -111,8 +120,8 @@ export class SpapDataService {
                         appWebUri: 'https://gfr.tcint.mayo.edu/gfr/',
                         appSwaggerUri: undefined,
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
+                        appDbConnectionString: 'jdbc:jtds:sqlserver://ROEFDN927Q/dlmp_ren_int;domain=MFAD;useNTLMv2=true\n',
+                        appAzureId: '5f4fc0e7-0989-4134-9d23-41afe461357c'
                     },
                     {
                         id: 3,
@@ -122,7 +131,7 @@ export class SpapDataService {
                         appSwaggerUri: undefined,
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
-                        appAzureId: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 4,
@@ -131,37 +140,45 @@ export class SpapDataService {
                         appWebUri: 'https://gfr.tcprod.mayo.edu/gfr/',
                         appSwaggerUri: undefined,
                         apigeeUri: undefined,
-                        appDbConnectionString: undefined,
-                        appAzureId: undefined
-                    },
+                        appDbConnectionString: 'jdbc:jtds:sqlserver://ROEFDN037Q/dlmp_ren_prod;domain=MFAD;useNTLMv2=true\n',
+                        appAzureId: '6421a6a2-179d-4272-9c84-9e1d9ec6e065'
+                    }
                 ],
-                repos:[
+                repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined,
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/GFR'
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: undefined,
+                        repoUri: undefined
                     }
                 ],
-                updatedOn: '2025-11-09',
+                updatedOn: '2025-11-18',
                 appSpecs: `
-                          <p><b>Dependency App:</b> <span style="color:#2c7be5;">CliApi</span></p>
-                          <p><b>Endpoints dependent are:</b></p>
-                          <ol style="list-style-type: decimal; padding-left: 1.5rem; margin-top: 0.5rem;">
-                            <li><code>/v1/Result/bioChem</code></li>
-                            <li><code>/v1/Sslv/SampleInfo</code></li>
-                            <li><code>/v1/Sslv/Result</code></li>
-                            <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
-                            <li><code>/v1/Case/SoftId/Search</code></li>
-                          </ol>
+                         <div>
+                              <p><b>Dependency App:</b> <span style="color:#2c7be5;">CliApi</span></p>
+                              <ol style="list-style-type: decimal; padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li><code>/v1/Result/bioChem</code></li>
+                                <li><code>/v1/Sslv/SampleInfo</code></li>
+                                <li><code>/v1/Sslv/Result</code></li>
+                                <li><code>/v1/SoftMic/Patient/getDemographics</code></li>
+                                <li><code>/v1/Case/SoftId/Search</code></li>
+                              </ol>
+                          </div>
+                          <div style="margin-top:5rem;">
+                              <p><b>Dependency Auth Server:</b> <span style="color:#2c7be5;">Azure Entra ID</span></p>
+                              <ol style="margin-left: 1rem; list-style-type: decimal;">
+                                <li><code>Azure Tenant Id - a25fff9c-3f63-4fb2-9a8a-d9bdd0321f9a</code></li>
+                                <li><code>App Roles - ADMINISTRATOR, TECH, NURSE</code></li>
+                              </ol>
+                        </div>
                         `,
                 appCategory: {
                     id: 1,
-                    name: 'Java Apps',
+                    name: 'Java Apps'
                 }
             },
 
@@ -202,7 +219,7 @@ export class SpapDataService {
                         appSwaggerUri: undefined,
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
-                        appAzureId: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 4,
@@ -213,25 +230,25 @@ export class SpapDataService {
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
-                    },
+                    }
                 ],
-                repos:[
+                repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined,
+                        repoUri: undefined
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: undefined,
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
                 appCategory: {
                     id: 1,
-                    name: 'Java Apps',
+                    name: 'Java Apps'
                 }
             },
 
@@ -272,7 +289,7 @@ export class SpapDataService {
                         appSwaggerUri: 'https://pub-svcs-s.dlmp-cad-p.caf.mccapp.com/swagger-ui/index.html',
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
-                        appAzureId: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 4,
@@ -283,25 +300,25 @@ export class SpapDataService {
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
-                    },
+                    }
                 ],
-                repos:[
+                repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined,
+                        repoUri: undefined
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: undefined,
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
                 appCategory: {
                     id: 1,
-                    name: 'Java Apps',
+                    name: 'Java Apps'
                 }
             },
 
@@ -322,7 +339,7 @@ export class SpapDataService {
                         appSwaggerUri: 'https://cadlis.dev.mayo.edu/swagger/index.html',
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
-                        appAzureId: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 2,
@@ -353,26 +370,25 @@ export class SpapDataService {
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
-                    },
+                    }
                 ],
-                repos:[
+                repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined,
+                        repoUri: undefined
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: undefined,
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
                 appCategory: {
                     id: 2,
-                    name: 'DotNet Apps',
-
+                    name: 'DotNet Apps'
                 }
             },
 
@@ -393,7 +409,7 @@ export class SpapDataService {
                         appSwaggerUri: 'https://cadlis.dev.mayo.edu/swagger/index.html',
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
-                        appAzureId: undefined,
+                        appAzureId: undefined
                     },
                     {
                         id: 2,
@@ -424,30 +440,27 @@ export class SpapDataService {
                         apigeeUri: undefined,
                         appDbConnectionString: undefined,
                         appAzureId: undefined
-                    },
+                    }
                 ],
-                repos:[
+                repos: [
                     {
                         id: 1,
                         repoName: 'App',
-                        repoUri: undefined,
+                        repoUri: undefined
                     },
                     {
                         id: 1,
                         repoName: 'IAC',
-                        repoUri: undefined,
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
                 appSpecs: undefined,
                 appCategory: {
-                        id: 3,
-                        name: 'Dependency Apps',
-
+                    id: 3,
+                    name: 'Dependency Apps'
                 }
-            },
-
-
+            }
         ] as SpecialtyApp[];
     }
 
