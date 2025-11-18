@@ -72,6 +72,11 @@ export class SpapDataService {
                         id: 3,
                         repoName: 'Api',
                         repoUri: undefined
+                    },
+                    {
+                        id: 4,
+                        repoName: 'Apigee',
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
@@ -163,6 +168,11 @@ export class SpapDataService {
                     {
                         id: 3,
                         repoName: 'Api',
+                        repoUri: undefined
+                    },
+                    {
+                        id: 4,
+                        repoName: 'Apigee',
                         repoUri: undefined
                     }
                 ],
@@ -257,6 +267,11 @@ export class SpapDataService {
                         id: 3,
                         repoName: 'Api',
                         repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/NERDS_API'
+                    },
+                    {
+                        id: 4,
+                        repoName: 'Apigee',
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
@@ -332,6 +347,11 @@ export class SpapDataService {
                         id: 3,
                         repoName: 'Api',
                         repoUri: undefined
+                    },
+                    {
+                        id: 4,
+                        repoName: 'Apigee',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/apg-x-pxy-cad-gbs-gc-pub-svcs'
                     }
                 ],
                 updatedOn: '2025-11-09',
@@ -428,6 +448,11 @@ export class SpapDataService {
                         id: 3,
                         repoName: 'Api',
                         repoUri: undefined
+                    },
+                    {
+                        id: 4,
+                        repoName: 'Apigee',
+                        repoUri: undefined
                     }
                 ],
                 updatedOn: '2025-11-09',
@@ -503,6 +528,11 @@ export class SpapDataService {
                         id: 3,
                         repoName: 'Api',
                         repoUri: undefined
+                    },
+                    {
+                        id: 4,
+                        repoName: 'Apigee',
+                        repoUri: 'https://dev.azure.com/mclm/GBS%20CAD/_git/apg-x-pxy-cad-lis-api'
                     }
                 ],
                 updatedOn: '2025-11-09',
