@@ -155,6 +155,13 @@ export class DevResDataService {
                             { label: 'Podman', action: () => window.open('https://podman.io/') },
                         ]
                     },
+                    {
+                        label: 'Web Resources',
+                        items: [
+                            { label: 'Invisible Character Viewer', action: () => window.open('https://invisiblecharacterviewer.com/') },
+                            { label: 'Invisible Characters', action: () => window.open('https://invisible-characters.com/view.html') },
+                        ]
+                    },
 
                 ]
 
