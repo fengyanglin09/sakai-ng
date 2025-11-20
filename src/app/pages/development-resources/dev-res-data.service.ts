@@ -86,7 +86,7 @@ export class DevResDataService {
 
             ]
             } ,
-            { id: 2, label: 'App Dev Tools', activeItemId: 'dev tools', name: 'dev tools', description: 'Description for Resource 2',
+            { id: 2, label: 'Dev Tools', activeItemId: 'dev tools', name: 'dev tools', description: 'Description for Resource 2',
                 rowCounts: 5,
                 resources: [
 
@@ -159,7 +159,7 @@ export class DevResDataService {
                 ]
 
             } ,
-            { id: 3, label: 'App Dev References', activeItemId: 'app dev resources', name: 'app dev resources', description: 'Description for Resource 3',
+            { id: 3, label: 'Dev References', activeItemId: 'dev references', name: 'dev references', description: 'Description for Resource 3',
                 rowCounts: 9,
                 resources: [
                     {
